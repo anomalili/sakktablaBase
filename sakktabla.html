@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MZSL</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: blueviolet;
+        }
+        .fekacella {
+            background-color: black;
+        }
+        .fehercella {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <br><br>
+    <br><br>
+   
+
+    <script type="text/javascript">
+
+        var center = document.createElement('center');
+        var ChessTable = document.createElement('table');
+        for (var i = 0; i < 8; i++) {
+ 
+        var tr = document.createElement('tr');
+            for (var j = 0; j < 8; j++) {
+ 
+                var td = document.createElement('td');
+ 
+
+                if ((i + j) % 2 == 0) {
+ 
+                    td.setAttribute('class', 'fehercella', onclick="kattintfekete() ");
+                    tr.appendChild(td);
+                    
+                }
+                else {
+                    td.setAttribute('class', 'fekacella',  onclick="kattintfeher()");
+                    tr.appendChild(td);
+                }
+            }
+ 
+            ChessTable.appendChild(tr);
+        }
+
+        center.appendChild(ChessTable);
+        ChessTable.setAttribute('cellspacing', '0');
+        ChessTable.setAttribute('width', '500px');
+        ChessTable.setAttribute('height', '500px');
+        document.body.appendChild(center);
+
+        function kattintfeher() {
+            document.getElementsByClassName("fehercella").style.backgroundColor = "red";
+        
+        }
+
+        function kattintfekete() {
+            document.getElementsByClassName("fehercella").style.backgroundColor = "blue";
+            
+            
+
+            function feketeKep() {
+  var feketeGyalog = document.createElement("IMG");
+  feketeGyalog.setAttribute("src", "fekete.png");
+  feketeGyalog.setAttribute("width", "50");
+  feketeGyalog.setAttribute("height", "50");
+  feketeGyalog.setAttribute("alt", "fekete gyalog/paraszt");
+  /* document.td.appendChild(feketeGyalog); */
+}
+function feherKep() {
+  var feherGyalog = document.createElement("IMG");
+  feherGyalog.setAttribute("src", "feher.png");
+  feherGyalog.setAttribute("width", "50");
+  feherGyalog.setAttribute("height", "50");
+  feherGyalog.setAttribute("alt", "feher gyalog/paraszt");
+/*   document.td.appendChild(feherGyalog); */
+} 
+
+
+
+}
+    </script>
+</body>
+ 
+</html>
